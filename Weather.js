@@ -68,7 +68,7 @@ const weatherOptions = {
 }
 
 
-export default function Weather({ temp, condition }){
+export default function Weather({ temp, condition, name}){
     return (
             <LinearGradient
                 colors = { weatherOptions[condition].gradient }
@@ -78,6 +78,7 @@ export default function Weather({ temp, condition }){
                 <View style={styles.halfContainer}>
                     <MaterialCommunityIcons size = {96} name={weatherOptions[condition].iconName} color="white"/>
                     <Text style = {styles.temp}>{temp}°</Text>
+                    <Text style={styles.location}>in {name}</Text>
                 </View>
                 <View style={{...styles.halfContainer, ...styles.textContainer}}>
                     <Text style = {styles.title}>{weatherOptions[condition].title}</Text>
@@ -140,7 +141,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         alignItems:"flex-start"
 
-    }
+    },
 
+    location : {
+      fontSize : 30,
+      marginTop : 10,
+      color : "white"
+    }
 
 });

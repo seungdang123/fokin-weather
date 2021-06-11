@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Learning React Native by Building a Foking Weather App with NomadCoders",
+    "githubUrl": "https://github.com/seungdang123/fokin-weather"
   }
 }
